@@ -1,0 +1,14 @@
+<div *ngIf="isLoggedIn; else loggedOut">
+  Logged in as {{role}}.
+</div>
+
+<ng-template #loggedOut>
+  <div class="row">
+  <button class="btn btn-secondary" (click)="loginUser()">Login as User</button>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <button class="btn btn-primary" (click)="loginAdmin()">Login as Admin</button>
+</div>
+  <hr />
+  <p>Don't have an account?</p>
+  <a href="#/signup" class="btn btn-success">Sign Up</a>
+</ng-template>
